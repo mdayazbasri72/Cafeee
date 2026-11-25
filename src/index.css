@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+    background-color: #FAF7F2;
+    color: #1A120E;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.glass-dark {
+  background: rgba(18, 13, 10, 0.78);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-cream {
+  background: rgba(250, 247, 242, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(26, 18, 14, 0.08);
+}
+
+.perspective-card {
+  perspective: 1000px;
+}
+
+.card-3d-inner {
+  transform-style: preserve-3d;
+  transition: transform 220ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 220ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-3d-inner:hover {
+  transform: translateY(-4px) rotateX(1.5deg) rotateY(-1.5deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card-3d-inner:hover {
+    transform: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}

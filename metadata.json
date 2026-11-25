@@ -1,0 +1,8 @@
+{
+  "name": "CAFEE — Luxury Artisan Café & Patisserie",
+  "description": "Experience CAFEE: freshly roasted single-origin coffee, artisanal wood-fired cuisine, online ordering, table reservations, and patisserie craftsmanship.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
